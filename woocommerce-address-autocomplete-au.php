@@ -2,7 +2,8 @@
 /**
  * Plugin Name: WooCommerce Address Autocomplete (Australia)
  * Description: Adds Google Places Autocomplete to WooCommerce checkout fields, biased to Australian addresses first.
- * Author: Brodie Owens
+ * Author: OnyxWM
+ * Plugin URI: https://github.com/OnyxWM/woocommerce-address-autocomplete-au
  * Version: 1.1.2
  */
 
