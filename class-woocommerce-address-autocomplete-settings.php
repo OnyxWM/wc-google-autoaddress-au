@@ -3,12 +3,12 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class BO_WC_Autocomplete_Settings extends WC_Settings_Page
+class OXWM_WC_Autocomplete_Settings extends WC_Settings_Page
 {
     public function __construct()
     {
-        $this->id    = 'bo_wc_autocomplete';
-        $this->label = __('Address Autocomplete', 'bo_wc_autocomplete');
+        $this->id    = 'oxwm_wc_autocomplete';
+        $this->label = __('Address Autocomplete', 'oxwm_wc_autocomplete');
         parent::__construct();
     }
 
@@ -19,30 +19,30 @@ class BO_WC_Autocomplete_Settings extends WC_Settings_Page
     {
         $settings = [
             [
-                'title' => __('Google Address Autocomplete', 'bo_wc_autocomplete'),
+                'title' => __('Google Address Autocomplete', 'oxwm_wc_autocomplete'),
                 'type'  => 'title',
-                'id'    => 'bo_wc_autocomplete_title',
+                'id'    => 'oxwm_wc_autocomplete_title',
                 'desc'  => __(
                     'Configure Google Maps address autocomplete for WooCommerce checkout. Use a valid API key with Places API enabled.',
-                    'bo_wc_autocomplete'
+                    'oxwm_wc_autocomplete'
                 ),
             ],
             [
-                'title'    => __('Google Maps API Key', 'bo_wc_autocomplete'),
-                'id'       => 'bo_wc_autocomplete_api_key',
+                'title'    => __('Google Maps API Key', 'oxwm_wc_autocomplete'),
+                'id'       => 'oxwm_wc_autocomplete_api_key',
                 'type'     => 'text',
                 'css'      => 'min-width:300px;',
                 'default'  => '',
-                'desc'     => __('Your Google Maps JavaScript API key.', 'bo_wc_autocomplete'),
+                'desc'     => __('Your Google Maps JavaScript API key.', 'oxwm_wc_autocomplete'),
                 'desc_tip' => true,
             ],
             [
                 'type' => 'sectionend',
-                'id'   => 'bo_wc_autocomplete_title',
+                'id'   => 'oxwm_wc_autocomplete_title',
             ],
         ];
 
-        return apply_filters('bo_wc_autocomplete_settings', $settings);
+        return apply_filters('oxwm_wc_autocomplete_settings', $settings);
     }
 
     /**

@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-add_filter('woocommerce_get_settings_pages', 'bo_wc_autocomplete_add_settings_page');
+add_filter('woocommerce_get_settings_pages', 'oxwm_wc_autocomplete_add_settings_page');
 
 function bo_wc_autocomplete_add_settings_page($pages)
 {
@@ -27,7 +27,7 @@ add_action('wp_enqueue_scripts', function () {
         return;
     }
 
-    $api_key = get_option('bo_wc_autocomplete_api_key', '');
+    $api_key = get_option('oxwm_wc_autocomplete_api_key', '');
     if (empty($api_key)) {
         return;
     }
