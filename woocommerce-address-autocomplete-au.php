@@ -13,11 +13,11 @@ if (!defined('ABSPATH')) {
 
 add_filter('woocommerce_get_settings_pages', 'oxwm_wc_autocomplete_add_settings_page');
 
-function bo_wc_autocomplete_add_settings_page($pages)
+function oxwm_wc_autocomplete_add_settings_page($pages)
 {
     if (class_exists('WC_Settings_Page')) {
         require_once dirname(__FILE__) . '/class-woocommerce-address-autocomplete-settings.php';
-        $pages[] = new BO_WC_Autocomplete_Settings();
+        $pages[] = new OXWM_WC_Autocomplete_Settings();
     }
     return $pages;
 }
